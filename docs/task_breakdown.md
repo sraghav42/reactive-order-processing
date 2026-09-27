@@ -108,7 +108,8 @@ This document breaks down the Event-Driven Order Pipeline project into increment
 ### Task 5.1: Native Image Verification
 - **Description:** Verify application compiles and passes tests as a native GraalVM executable.
 - **Verification / Test:**
-  - Run `@QuarkusIntegrationTest` against native executable: `./mvnw verify -Dnative` (or container-based native build).
+  - With GraalVM Native Image installed, run `./mvnw verify -Dnative`.
+  - Otherwise, with Docker running, run `./mvnw verify -Dnative -Dquarkus.native.container-build=true`.
 
 ### Task 5.2: Project Documentation (`README.md`)
 - **Description:** Provide comprehensive `README.md` with setup and architecture details.
